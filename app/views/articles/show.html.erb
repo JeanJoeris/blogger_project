@@ -1,9 +1,13 @@
 <h2><%= @article.title %></h2>
 <p>
-  ------------------
+  ------------------------------------------
 </p>
+<br/>
 <p>
   <%= @article.body %>
 </p>
+<br />
 
 <%= link_to "Back to Articles", articles_path %>
+<%= link_to "Delete Article", article_path(@article), method: :delete, data: {confirm: "Really delete the article?"} %>
+<%= link_to "Edit Article", edit_article_path(@article) %>
